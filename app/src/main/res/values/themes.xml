@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MasteringMVVM" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!--to change font family-->
+        <item name="fontFamily">@font/jost_medium</item>
+        <item name="android:fontFamily">@font/jost_medium</item>
+
+        <item name="android:letterSpacing">.1</item>
+
+
+
+    </style>
+
+    <style name="Theme.MasteringMVVM" parent="Base.Theme.MasteringMVVM" />
+
+
+    <style name="ErrorAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

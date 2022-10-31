@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MasteringMVVM" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!--to change font family-->
+        <item name="fontFamily">@font/jost_medium</item>
+        <item name="android:fontFamily">@font/jost_medium</item>
+
+        <item name="android:letterSpacing">.1</item>
+
+
+    </style>
+</resources>

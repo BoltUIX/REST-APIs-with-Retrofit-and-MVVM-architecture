@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dot_selected">#335eee</color>
+    <color name="dot_default">#AFAEBE</color>
+    <color name="status_bar_color">#E6E6E6</color>
+    <color name="md_theme_dark_onPrimary">#002387</color>
+
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#3F51B5</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_95">#1a1a1a</color>
+    <color name="grey_100_">#0d0d0d</color>
+
+    <color name="md_theme_light_primary">#1F4FE0</color>
+    <color name="semiGray">#cecfd6</color>
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="brown700">#7E3A28</color>
+<!--    <color name="materialRed700">#DF2E38</color>-->
+    <color name="materialPink600">#D3284F</color>
+    <color name="materialRed400">#C8593A</color>
+    <color name="materialIndigo600">#2E5A92</color>
+
+
+    <color name="materialRed700">@android:color/holo_red_light</color>
+</resources>
