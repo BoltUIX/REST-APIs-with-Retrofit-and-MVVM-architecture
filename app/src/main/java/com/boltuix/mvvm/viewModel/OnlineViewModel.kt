@@ -2,13 +2,17 @@ package com.boltuix.mvvm.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.boltuix.mvvm.database.FavoriteMovieRepository
 import com.boltuix.mvvm.di.NetworkRepository
+import com.boltuix.mvvm.model.Article
 import com.boltuix.mvvm.model.NewResponse
 import com.boltuix.mvvm.utils.Constants.API_KEY
 import com.boltuix.mvvm.utils.Constants.COUNTRY_CODE
 /*import com.boltuix.mvvm.utils.DataHandler*/
 import com.boltuix.mvvm.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -19,7 +23,7 @@ import java.lang.Exception
 import javax.inject.Inject
 
 @HiltViewModel
- class OnlineViewModel @Inject constructor(private val networkRepository: NetworkRepository) : ViewModel() {
+ class OnlineViewModel @Inject constructor(private val networkRepository: NetworkRepository,private val databaseRepository: FavoriteMovieRepository) : ViewModel() {
 
 /*    private val _topHeadlines: MutableStateFlow<DataHandler<NewResponse>> = MutableStateFlow(DataHandler.Loading())
     val topHeadlines: StateFlow <DataHandler<NewResponse>> = _topHeadlines
@@ -66,4 +70,17 @@ import javax.inject.Inject
         // Posting success response as it becomes ready
         _topHeadlines.value = networkRepository.getTopHeadlines(COUNTRY_CODE, API_KEY)
     }
+
+
+    //databaseRepository
+
+
+    fun addToFavorite(movie: Article){
+        CoroutineScope(Dispatchers.IO).launch {
+            databaseRepository.addToFavorite(movie)
+        }
+    }
+
+
+
 }

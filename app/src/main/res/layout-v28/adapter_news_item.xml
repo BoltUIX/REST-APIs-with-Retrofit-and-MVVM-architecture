@@ -6,8 +6,8 @@
     app:cardElevation="20dp"
     android:layout_margin="18dp"
     app:cardBackgroundColor="@color/white"
-    android:outlineAmbientShadowColor="@android:color/holo_red_light"
-    android:outlineSpotShadowColor="@android:color/holo_red_light"
+    android:outlineAmbientShadowColor="@color/md_theme_light_primary"
+    android:outlineSpotShadowColor="@color/md_theme_light_primary"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

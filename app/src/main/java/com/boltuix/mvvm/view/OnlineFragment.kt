@@ -90,6 +90,8 @@ class OnlineFragment : Fragment() {
 
         newsAdapter.onArticleClicked {
             it.title?.let { it1 -> showSnackbar(it1) }
+
+            viewModel.addToFavorite(it)
         }
 
         binding.recyclerView.apply {
@@ -102,7 +104,7 @@ class OnlineFragment : Fragment() {
     private fun showSnackbar(message :String) {
         try{
             val snackbar = Snackbar.make(binding.coordinator, message, Snackbar.LENGTH_INDEFINITE)
-            snackbar.setBackgroundTint(ContextCompat.getColor(requireContext(), R.color.materialRed700))
+            snackbar.setBackgroundTint(ContextCompat.getColor(requireContext(), R.color.md_theme_light_primary))
             snackbar.show()
         }catch (e:java.lang.Exception){
         }
