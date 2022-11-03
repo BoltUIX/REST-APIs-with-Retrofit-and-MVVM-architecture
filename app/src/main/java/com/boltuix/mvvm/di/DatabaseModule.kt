@@ -2,8 +2,8 @@ package com.boltuix.mvvm.di
 
 import android.content.Context
 import androidx.room.Room
-import com.boltuix.mvvm.database.FavoriteMovieDao
-import com.boltuix.mvvm.database.FavoriteMovieDatabase
+import com.boltuix.mvvm.database.ArticleDao
+import com.boltuix.mvvm.database.ArticleDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,16 +17,16 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideAppDatabase(@ApplicationContext appContext: Context): FavoriteMovieDatabase {
+    fun provideAppDatabase(@ApplicationContext appContext: Context): ArticleDatabase {
         return Room.databaseBuilder(
             appContext,
-            FavoriteMovieDatabase::class.java,
+            ArticleDatabase::class.java,
             "app8.db"
         ).build()
     }
 
     @Provides
-    fun provideMovieDao(appDatabase: FavoriteMovieDatabase): FavoriteMovieDao {
-        return appDatabase.getFavoriteMovieDao()
+    fun provideMovieDao(appDatabase: ArticleDatabase): ArticleDao {
+        return appDatabase.getArticleDao()
     }
 }

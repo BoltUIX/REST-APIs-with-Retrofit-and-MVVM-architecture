@@ -2,7 +2,7 @@ package com.boltuix.mvvm.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.boltuix.mvvm.database.FavoriteMovieRepository
+import com.boltuix.mvvm.database.ArticleRepository
 import com.boltuix.mvvm.di.NetworkRepository
 import com.boltuix.mvvm.model.Article
 import com.boltuix.mvvm.model.NewResponse
@@ -16,14 +16,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import retrofit2.HttpException
-import retrofit2.Response
-import java.io.IOException
-import java.lang.Exception
 import javax.inject.Inject
 
 @HiltViewModel
- class OnlineViewModel @Inject constructor(private val networkRepository: NetworkRepository,private val databaseRepository: FavoriteMovieRepository) : ViewModel() {
+ class OnlineViewModel @Inject constructor(private val networkRepository: NetworkRepository,private val databaseRepository: ArticleRepository) : ViewModel() {
 
 /*    private val _topHeadlines: MutableStateFlow<DataHandler<NewResponse>> = MutableStateFlow(DataHandler.Loading())
     val topHeadlines: StateFlow <DataHandler<NewResponse>> = _topHeadlines
